@@ -1,0 +1,818 @@
+
+
+/* =========================
+   ZÁKLAD
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f4ef;
+    color: #202020;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================
+   NAVIGACE
+========================= */
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #202020;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #202020;
+    font-size: 15px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px 60px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-text,
+.hero-image {
+    min-width: 0;
+}
+
+.eyebrow {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 0.95;
+    margin: 0 0 25px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.intro {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid #202020;
+    text-decoration: none;
+    color: #202020;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #202020;
+    color: #ffffff;
+}
+
+.profile-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   O MNĚ
+========================= */
+
+.about {
+    padding: 120px 40px;
+    background: #202020;
+    color: #ffffff;
+}
+
+.about-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.about h2 {
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+.about p {
+    max-width: 760px;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   PROJEKTY
+========================= */
+
+.projects {
+    padding: 120px 40px;
+    background: #f6f4ef;
+}
+
+.projects-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 100px;
+}
+
+.projects-heading h2 {
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 1;
+    margin: 0;
+}
+
+.projects-heading p {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PROJEKT
+========================= */
+
+.project {
+    border-top: 1px solid #202020;
+    padding-top: 35px;
+}
+
+.project-secondary {
+    margin-top: 140px;
+}
+
+.project-info {
+    display: block;
+    margin-bottom: 80px;
+}
+
+.project-info h3 {
+    font-size: clamp(36px, 5vw, 60px);
+    margin: 0 0 10px;
+}
+
+.project-subtitle {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.project-description {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 25px 0 20px;
+}
+
+
+/* =========================
+   ŠTÍTKY
+========================= */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tags span {
+    padding: 8px 14px;
+    border: 1px solid #202020;
+    border-radius: 30px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   SKUPINY UKÁZEK
+========================= */
+
+.work-group {
+    margin: 100px 0;
+}
+
+.work-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 15px;
+}
+
+.work-heading span {
+    font-weight: bold;
+}
+
+.work-heading p {
+    margin: 0;
+}
+
+
+/* =========================
+   GRIDY OBRÁZKŮ
+========================= */
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.rollup-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+}
+
+
+/* =========================
+   RATIONALFANS OBRÁZKY
+========================= */
+
+.banner-grid img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.content-grid img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    object-position: top center;
+    display: block;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.product-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.rollup-grid img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    object-position: top center;
+    display: block;
+}
+
+
+/* =========================
+   EMSZERO
+========================= */
+
+.emszero-banner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 280px));
+    gap: 25px;
+    justify-content: center;
+    align-items: start;
+}
+
+.emszero-banner-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    object-position: top center;
+    display: block;
+}
+
+
+/* =========================
+   DOVEDNOSTI
+========================= */
+
+.skills {
+    padding: 120px 40px;
+    background: #202020;
+    color: #ffffff;
+}
+
+.skills-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 80px;
+}
+
+.skills-heading h2 {
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 1;
+    margin: 0;
+}
+
+.skills-heading p {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 60px;
+}
+
+.skill {
+    min-width: 0;
+    padding: 40px 40px 50px 0;
+    border-top: 1px solid #666;
+}
+
+.skill:nth-child(even) {
+    padding-left: 0px;
+}
+
+.skill h3 {
+    font-size: 30px;
+    margin: 0 0 15px;
+}
+
+.skill p {
+    max-width: 480px;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =========================
+   KONTAKT
+========================= */
+
+.contact {
+    padding: 120px 40px 40px;
+    background: #f6f4ef;
+    color: #202020;
+}
+
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    padding: 70px 0 120px;
+}
+
+.contact-content h2 {
+    max-width: 950px;
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 1;
+    margin: 0 0 40px;
+}
+
+.contact-intro {
+    max-width: 650px;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 45px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-links a {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid #202020;
+    color: #202020;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: #202020;
+    color: #ffffff;
+}
+
+.contact-footer {
+    padding-top: 25px;
+    border-top: 1px solid #202020;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET + MOBIL
+   do 800 px
+========================= */
+
+@media (max-width: 800px) {
+
+    /* NAVIGACE */
+
+    .nav-wrapper {
+        padding: 20px 32px;
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 12px 18px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        padding: 130px 32px 70px;
+        gap: 50px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+
+    /* O MNĚ */
+
+    .about {
+        padding: 80px 32px;
+    }
+
+
+    /* PROJEKTY */
+
+    .projects {
+        padding: 80px 32px;
+    }
+
+    .projects-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 70px;
+    }
+
+    .project-info {
+    margin-bottom: 60px;
+}
+
+    .project-secondary {
+        margin-top: 100px;
+    }
+
+    .work-group {
+        margin: 70px 0;
+    }
+
+    .work-heading {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    /* RATIONALFANS GALERIE */
+
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rollup-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .banner-grid img {
+        height: auto;
+        max-height: 450px;
+    }
+
+    .content-grid img {
+        height: auto;
+        max-height: 700px;
+    }
+
+    .product-grid img {
+        height: 300px;
+    }
+
+    .rollup-grid img {
+        height: 500px;
+    }
+
+
+    /* EMSZERO */
+
+    .emszero-banner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emszero-banner-grid img {
+        height: auto;
+        max-height: 450px;
+    }
+
+
+    /* DOVEDNOSTI */
+
+    .skills {
+        padding: 80px 32px;
+    }
+
+    .skills-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+    }
+
+    .skill,
+    .skill:nth-child(even) {
+        width: 100%;
+        min-width: 0;
+        padding: 35px 0;
+    }
+
+
+    /* KONTAKT */
+
+    .contact {
+        padding: 80px 32px 30px;
+    }
+
+    .contact-content {
+        padding: 50px 0 80px;
+    }
+}
+
+
+/* =========================
+   MALÝ MOBIL
+   do 520 px
+========================= */
+
+@media (max-width: 520px) {
+
+    /* NAVIGACE */
+
+    
+.nav-wrapper {
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 28px;
+}
+
+nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-size: 13px;
+}
+
+
+    /* HERO */
+
+    .hero {
+    padding-top: 135px;
+    padding-left: 28px;
+    padding-right: 28px;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: clamp(42px, 14vw, 60px);
+    }
+
+    .intro {
+        font-size: 18px;
+    }
+
+
+    /* O MNĚ */
+
+    .about {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+
+    /* PROJEKTY */
+
+    .projects {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rollup-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid img {
+    height: auto;
+    max-height: 320px;
+}
+
+.rollup-grid img {
+    height: auto;
+    max-height: 480px;
+}
+
+
+    /* EMSZERO */
+
+    .emszero-banner-grid {
+        gap: 15px;
+    }
+
+    .emszero-banner-grid img {
+        width: 100%;
+        height: auto;
+        max-height: 260px;
+        object-fit: contain;
+    }
+
+    /* PROSPANEK */
+    .project-subtitle {
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    line-height: 1.4;
+}
+
+
+    /* DOVEDNOSTI */
+
+    .skills {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+
+    /* KONTAKT */
+
+    .contact {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .contact-content {
+        padding: 40px 0 70px;
+    }
+
+    .contact-content h2 {
+        font-size: clamp(40px, 12vw, 56px);
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
